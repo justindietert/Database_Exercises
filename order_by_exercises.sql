@@ -3,7 +3,7 @@ SELECT * FROM employees
     OR first_name = 'Vidya'
     OR first_name = 'Maya')
    AND (gender = 'M')
-   ORDER BY first_name;
+   ORDER BY first_name, last_name;
 
 SELECT * FROM employees 
  WHERE last_name 

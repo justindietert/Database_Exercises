@@ -3,14 +3,14 @@ SELECT * FROM employees
     OR first_name = 'Vidya'
     OR first_name = 'Maya')
    AND (gender = 'M')
-   ORDER BY last_name, first_name;
+   ORDER BY last_name DESC, first_name;
 
 SELECT * FROM employees 
  WHERE last_name 
   LIKE 'E%' 
     OR last_name 
   LIKE '%e'
-  ORDER BY emp_no;
+  ORDER BY emp_no DESC;
  
 SELECT * FROM employees 
  WHERE last_name 

@@ -1,16 +1,16 @@
-  SELECT COUNT(first_name), gender 
+  SELECT COUNT(first_name) AS 'Number', gender AS 'Gender'
     FROM employees
    WHERE first_name = 'Irena'
       OR first_name = 'Vidya'
       OR first_name = 'Maya'
 GROUP BY gender;
 
-SELECT * FROM employees 
+SELECT CONCAT(first_name, ' ', last_name) AS 'Full Name'
+FROM employees 
  WHERE last_name 
   LIKE 'E%' 
     OR last_name 
-  LIKE '%e'
-  ORDER BY emp_no DESC;
+  LIKE '%e';
  
 SELECT * FROM employees 
  WHERE last_name 

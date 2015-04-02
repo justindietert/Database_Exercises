@@ -22,12 +22,9 @@ GROUP BY title;
 
 SELECT d.dept_name AS 'Department Name', CONCAT(e.first_name, ' ', e.last_name) AS 'Current Manager', s.salary AS 'Salary'
 FROM   salaries AS s
-JOIN   dept_manager AS dm
-ON     s.emp_no = dm.emp_no
-JOIN   employees AS e
-ON     e.emp_no = dm.emp_no
-JOIN   departments AS d
-ON     d.dept_no = dm.dept_no
+JOIN   dept_manager AS dm ON s.emp_no = dm.emp_no
+JOIN   employees AS e ON e.emp_no = dm.emp_no
+JOIN   departments AS d ON d.dept_no = dm.dept_no
 WHERE  s.to_date >= now() 
 AND    dm.to_date >= now();
 
